@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'rclpy', 'std_msgs'],
     zip_safe=True,
     maintainer='linus',
     maintainer_email='ge75puk@mytum.de',
