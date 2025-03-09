@@ -1,20 +1,25 @@
-parameters:
-  - name: publisher_frequency
+sinewave_parameters:
+  publisher_frequency:
     type: double
     default_value: 10.0
-    description: "Frequency of the sine wave in 1/s."
-
-  - name: amplitude
-    type: double
-    default_value: 5.0
-    description: "Amplitude of the sine wave."
-
-  - name: angular_frequency
-    type: double 
-    default_value: 1.0
-    description: "Angular frequency of the sine wave."
+    description: "The frequency of the sine wave publisher in Hz."
   
-  - name: phase
+  amplitude:
+    type: double
+    default_value: 1.0
+    description: "The amplitude of the sine wave."
+
+  angular_frequency:
+    type: double
+    default_value: 1.0
+    description: "The angular frequency of the sine wave."
+
+  phase:
     type: double
     default_value: 0.0
-    description: "Phase shift of the sine wave."
+    description: "The phase shift of the sine wave."
+
+
+
+
+
