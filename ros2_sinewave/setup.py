@@ -1,4 +1,7 @@
 from setuptools import find_packages, setup
+from generate_parameter_library_py.setup_helper import generate_parameter_module
+import os
+from glob import glob
 
 package_name = 'ros2_sinewave'
 
