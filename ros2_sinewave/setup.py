@@ -5,17 +5,16 @@ from glob import glob
 
 package_name = 'ros2_sinewave'
 
-# Generate the parameter module — no manual file moving
 generate_parameter_module(
-    module_name=f"{package_name}.sinewave_parameters",
+    module_name="sinewave_parameters",
     yaml_file=os.path.join('param', 'sinewave_parameters.yaml'),
-    install_base=package_name
+    merge_install=True,  # Use a merged install layout
 )
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(include=[package_name]),
     install_requires=['setuptools', 'rclpy', 'std_msgs', 'generate_parameter_library'],
     zip_safe=True,
     maintainer='linus',
@@ -29,11 +28,13 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'sine_publisher = ros2_sinewave.sine_publisher:main',
-            'sine_subscriber = ros2_sinewave.sine_subscriber:main',
+            'sinewave_publisher = ros2_sinewave.sinewave_publisher:main',
+            'sinewave_subscriber = ros2_sinewave.sinewave_subscriber:main',
         ],
     },
 )
+
+
 
 
 
