@@ -8,7 +8,7 @@ package_name = 'ros2_sinewave'
 generate_parameter_module(
     module_name="sinewave_parameters",
     yaml_file=os.path.join('param', 'sinewave_parameters.yaml'),
-    merge_install=True,  # Use a merged install layout
+    merge_install=False,
 )
 
 setup(
@@ -25,6 +25,7 @@ setup(
     data_files=[
         (os.path.join('share', package_name), ['package.xml']),
         (os.path.join('share', package_name, 'param'), glob('param/*.yaml')),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
     ],
     entry_points={
         'console_scripts': [
