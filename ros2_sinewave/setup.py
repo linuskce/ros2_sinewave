@@ -8,7 +8,7 @@ package_name = 'ros2_sinewave'
 generate_parameter_module(
     module_name="sinewave_parameters",
     yaml_file=os.path.join('param', 'sinewave_parameters.yaml'),
-    merge_install=False,
+    merge_install=True,
 )
 
 setup(
