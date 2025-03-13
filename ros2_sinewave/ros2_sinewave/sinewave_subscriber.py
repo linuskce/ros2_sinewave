@@ -47,23 +47,39 @@ class SineWaveSubscriber(Node):
             self.get_logger().error(f"File not found: {input_path}")
             response.grayscale_image_path = ""
             return response
-
-        # Load the rgb image
-        img = cv2.imread(input_path)
-        if img is None:
-            self.get_logger().error(f"Failed to read image from {input_path}")
-            response.grayscale_image_path = ""
-            return response
         
+        try:
+            img = cv2.imread(input_path)
+            if img is None:
+                raise ValueError("Image could not be loaded (imread returned None)")
+        except Exception as e:
+            error_msg = f"Error loading image: {e}"
+            self.get_logger().error(error_msg)
+            response.grayscale_image_path = error_msg
+            return response
+
         # Convert image to grayscale
-        gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        try: 
+            gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        except Exception as e: 
+            error_msg = f"Error converting image to grayscale: {e}"
+            self.get_logger().error(error_msg)
+            response.grayscale_image_path = error_msg
+            return response
         
         # Define the new filepath
         base, ext = os.path.splitext(input_path)
         gray_path = base + "_grayscale" + ext
         
         # Save grayscale image
-        cv2.imwrite(gray_path, gray_img)
+        try:
+            cv2.imwrite(gray_path, gray_img)
+        except Exception as e:
+            error_msg = f"Error writing grayscale image: {e}"
+            self.get_logger().error(error_msg)
+            response.grayscale_image_path = error_msg
+            return response
+            
         self.get_logger().info(f"Saved grayscale image to: {gray_path}")
         
         # Fill the response
