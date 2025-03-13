@@ -67,7 +67,12 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     cd ros2_sinewave_ws 
     https://github.com/PickNikRobotics/generate_parameter_library.git
 
-3. **Build Packages and source the setup file**:
+3. **Build Packages and source the setup file**:<br/> 
+    Note (Windows):
+    Before building or running this project, ensure you have sourced your ROS 2 environment. For example:<br/>
+    ```bash
+    call C:\dev\ros2_jazzy\ros2-windows\local_setup.bat
+    ```
     ```bash
     colcon build --merge-install --packages-skip-regex ".*example.*"
     call install\local_setup.bat
@@ -90,6 +95,8 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     ```bash
     cd ros2_sinewave_ws 
     ros2 run rqt_console rqt_console
+    ```
+    (The publisher and subscriber values are plotted into one column but you can set a filter, to either only show the publisher or the subscriber)
 
 7. **Call the Custom Service**:<br/> 
     In a new Terminal:
