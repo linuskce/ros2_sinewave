@@ -12,6 +12,26 @@ This repository contains a ROS 2 application that:
 - **.gitignore**: Ignore rules for build, install, and log folders, among others
 - **README.md**: This file
 
+    ros2_sinewave_ws/
+    ├── ros2_sinewave/
+    │   ├── launch/
+    │   │   └── sinewave_launch.py
+    │   ├── param/
+    │   │   └── sinewave_parameters.yaml
+    │   ├── ros2_sinewave/
+    │   │   ├── __init__.py
+    │   │   ├── sinewave_parameters.py
+    │   │   ├── sinewave_publisher.py
+    │   │   └── sinewave_subscriber.py
+    │   └── test/
+    │       └── test_service_callback.py
+    ├── ros2_sinewave_interfaces/
+    │   ├── srv/
+    │   │   └── (...service files...)
+    │   ├── CMakeLists.txt
+    │   └── package.xml
+
+
 ## Build Instructions
 
 1. **Clone the repository**:
