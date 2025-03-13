@@ -7,7 +7,8 @@ import os
 import cv2
 
 # Import the custom service definition
-from ros2_sinewave.srv import ConvertImage
+from ros2_sinewave_interfaces.srv import ConvertImage
+
 
 class SineWaveSubscriber(Node):
     def __init__(self):
@@ -69,8 +70,7 @@ class SineWaveSubscriber(Node):
         response.grayscale_image_path = gray_path
         return response
   
-        
-
+    
 
 def main(args=None):
     rclpy.init(args=args)
