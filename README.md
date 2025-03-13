@@ -70,7 +70,7 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
 2. **Include Generate Parameter Library**:
     ```bash
     cd ros2_sinewave_ws 
-    https://github.com/PickNikRobotics/generate_parameter_library.git
+    git clone https://github.com/PickNikRobotics/generate_parameter_library.git
 
 3. **Build Packages and source the setup file**:<br/> 
     Note (Windows):
