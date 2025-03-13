@@ -79,8 +79,11 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     call C:\dev\ros2_jazzy\ros2-windows\local_setup.bat
     ```
     ```bash
-    colcon build --merge-install --packages-skip-regex ".*example.*"
+    colcon build --merge-install --packages-skip-regex ".*(example|parameter_traits).*"
     call install\local_setup.bat
+    ```
+    Note (Windows Users):
+    If you encounter errors that suggest using the Visual Studio Developer Command Prompt as an administrator, please try opening the Developer Command Prompt with admin rights and running the build commands from there.
 
 4. **Run the Nodes**:
     ```bash
@@ -94,6 +97,8 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     In Terminal 2:
     ```bash
     ros2 run ros2_sinewave sinewave_subscriber
+    ```
+    (Note: In any new terminal, you have to be in the workspace and the ROS 2 environment must be sourced again)
 
 6. **Plot the Sine Values**:<br/>  
     In a new Terminal:
