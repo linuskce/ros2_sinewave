@@ -44,8 +44,9 @@ class SineWaveSubscriber(Node):
         """
         input_path = request.image_path
         if not os.path.exists(input_path):
-            self.get_logger().error(f"File not found: {input_path}")
-            response.grayscale_image_path = ""
+            error_msg = f"File not found: {input_path}"
+            self.get_logger().error(error_msg)
+            response.grayscale_image_path = error_msg
             return response
         
         try:
