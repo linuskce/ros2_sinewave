@@ -41,13 +41,20 @@ This repository contains a ROS 2 application that:
     ```bash
     ros2 run ros2_sinewave sinewave_subscriber
 
-6. **Plot the Sine Values**:
+6. **Plot the Sine Values**:<br/>  
+    In a new Terminal:
     ```bash
+    cd ros2_sinewave_ws 
     ros2 run rqt_console rqt_console
 
-7. **Call the Custom Service**:
+7. **Call the Custom Service**:<br/> 
+    In a new Terminal:
     ```bash
+    cd ros2_sinewave_ws 
     ros2 service call /convert_image ros2_sinewave_interfaces/srv/ConvertImage "{image_path: 'C:/absolute/path/to/image.jpg'}"
+    ```
+
+
 
 
 
