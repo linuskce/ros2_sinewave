@@ -65,7 +65,7 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/linuskce/ros2_sinewave.git
+    git clone https://github.com/linuskce/ros2_sinewave_ws.git
 
 2. **Include Generate Parameter Library**:
     ```bash
