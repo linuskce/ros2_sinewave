@@ -32,7 +32,7 @@ This repository contains a ROS 2 application that:
     ```bash
     ros2 launch ros2_sinewave sinewave_launch.py
 
-5. **Run the Nodes seperately (Optional)**:\
+5. **Run the Nodes seperately (Optional)**:<br/>  
     In Terminal 1:
     ```bash
     ros2 run ros2_sinewave sinewave_publisher
