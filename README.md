@@ -31,6 +31,30 @@ This repository contains a ROS 2 application that:
     │   ├── CMakeLists.txt<br/> 
     │   └── package.xml<br/> 
 
+## Prerequisites<br/> 
+    Note: These instructions have been tested on Windows (e.g., Windows 10/11) with a ROS 2 distribution installed. Commands (like call install\local_setup.bat) are specific to Windows. If you’re on Linux, you’ll need to adapt commands (e.g., use source install/setup.bash) accordingly.
+
+1. **ROS 2 Installation**  
+   You need a working ROS 2 environment (e.g., Humble, Iron, Rolling).  
+   - [Install ROS 2](https://docs.ros.org/en/rolling/Installation.html) (adjust for your OS/distribution).
+   - On Windows, ensure you have Visual Studio and the necessary ROS 2 setup scripts installed.
+
+2. **Colcon**  
+   The [colcon build tool](https://colcon.readthedocs.io/en/released/) is required to build your workspace.  
+   - On most ROS 2 installations, colcon is already included.  
+   - Verify by running:  
+     ```bash
+     colcon --version
+     ```
+
+3. **Python 3**  
+   - ROS 2 uses Python 3. Confirm by running:  
+     ```bash
+     python --version
+     ```
+   - If you’re on Windows, ensure `python` is in your PATH.
+
+Once you have these prerequisites, follow the [Build Instructions](#build-instructions) below to build and run the project.
 
 ## Build Instructions
 
