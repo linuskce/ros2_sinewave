@@ -79,11 +79,24 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     call C:\dev\ros2_jazzy\ros2-windows\local_setup.bat
     ```
     ```bash
-    colcon build --merge-install --packages-skip-regex ".*(example|parameter_traits).*"
+    colcon build --merge-install --packages-skip-regex ".*(example).*"
     call install\local_setup.bat
     ```
     Note (Windows Users):
     If you encounter errors that suggest using the Visual Studio Developer Command Prompt as an administrator, please try opening the Developer Command Prompt with admin rights and running the build commands from there.
+
+    Note (Windows USers): 
+    If you encounter dependency issues related to the parameter_traits package, please remove the parameter_traits folder from your workspace's directory before building. To do this, run the following command from your workspace's folder:
+    ```bash
+    cd generate_parameter_library
+    rmdir /S /Q parameter_traits
+    cd ..
+    ```
+    Then continue with the build:
+    bash````
+    colcon build --merge-install --packages-skip-regex ".*(example).*"
+    call install\local_setup.bat
+
 
 4. **Run the Nodes**:
     ```bash
