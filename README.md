@@ -52,6 +52,12 @@ This repository contains a ROS 2 application that:
     ```bash
     cd ros2_sinewave_ws 
     ros2 service call /convert_image ros2_sinewave_interfaces/srv/ConvertImage "{image_path: 'C:/absolute/path/to/image.jpg'}"
+
+8. **Run a Unit Test to Test the Service**:<br/> 
+    In a new Terminal:
+    ```bash
+    cd ros2_sinewave_ws 
+    pytest ros2_sinewave/test/test_service_callback.py
     ```
 
 
