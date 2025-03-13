@@ -8,12 +8,16 @@ def generate_launch_description():
         Node(
             package='ros2_sinewave',
             executable='sinewave_publisher',
-            name='sinewave_publisher'
+            name='sinewave_publisher',
+            output='screen'
+
         ),
         Node(
             package='ros2_sinewave',
             executable='sinewave_subscriber',
-            name='sinewave_subscriber'
+            name='sinewave_subscriber',
+            output='screen'
+
         )
     ])
     
