@@ -93,7 +93,7 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     cd ..
     ```
     Then continue with the build:
-    bash````
+    bash```
     colcon build --merge-install --packages-skip-regex ".*(example).*"
     call install\local_setup.bat
 
