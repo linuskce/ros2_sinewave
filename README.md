@@ -20,7 +20,7 @@ This repository contains a ROS 2 application that:
 
 2. **Include Generate Parameter Library**:
     ```bash
-    cd ros2_sinewave 
+    cd ros2_sinewave_ws 
     https://github.com/PickNikRobotics/generate_parameter_library.git
 
 3. **Build Packages and source the setup file**:
