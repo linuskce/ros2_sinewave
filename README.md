@@ -103,12 +103,13 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
     ```
     (The publisher and subscriber values are plotted into one column but you can set a filter, to either only show the publisher or the subscriber)
 
-7. **Call the Custom Service**:<br/> 
+7. **Call the Custom Service (To convert an RGB image into grayscale)**:<br/> 
     In a new Terminal:
     ```bash
     cd ros2_sinewave_ws 
     ros2 service call /convert_image ros2_sinewave_interfaces/srv/ConvertImage "{image_path: 'C:/absolute/path/to/image.jpg'}"
-
+    ```
+    (The generated grayscale image is saved in the same folder as the original image)
 8. **Run a Unit Test to Test the Service**:<br/> 
     In a new Terminal:
     ```bash
