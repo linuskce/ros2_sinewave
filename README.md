@@ -31,10 +31,12 @@ This repository contains a ROS 2 application that:
     │   ├── CMakeLists.txt<br/> 
     │   └── package.xml<br/> #
 
-## Parameter Configuration:<br/> 
+## Parameter Configuration:
+
 This project uses parameters defined in the parameters.yaml file (located in the param/ folder). You can adjust values such as the publisher frequency, amplitude, angular frequency, and phase by modifying this file. When you build the project, these parameters are automatically loaded into the nodes.   
 
-## Prerequisites<br/> 
+## Prerequisites:
+
 Note: These instructions have been tested on Windows (e.g., Windows 10/11) with a ROS 2 distribution installed. Commands (like call install\local_setup.bat) are specific to Windows. If you’re on Linux, you’ll need to adapt commands (e.g., use source install/setup.bash) accordingly.
 
 1. **ROS 2 Installation**  
