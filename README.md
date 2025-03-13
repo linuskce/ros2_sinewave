@@ -106,31 +106,36 @@ Once you have these prerequisites, follow the [Build Instructions](#build-instru
 5. **Run the Nodes seperately (Optional)**:<br/>  
     In Terminal 1:
     ```bash
+    call install\local_setup.bat
     ros2 run ros2_sinewave sinewave_publisher
     ```
     In Terminal 2:
     ```bash
+    call install\local_setup.bat
     ros2 run ros2_sinewave sinewave_subscriber
     ```
     (Note: In any new terminal, you have to be in the workspace and the ROS 2 environment must be sourced again)
 
 6. **Plot the Sine Values**:<br/>  
-    In a new Terminal:
+    In a new Terminal (Remember to source the ROS2 Env):
     ```bash
     cd ros2_sinewave_ws 
+    call install\local_setup.bat
     ros2 run rqt_console rqt_console
     ```
     (The publisher and subscriber values are plotted into one column but you can set a filter, to either only show the publisher or the subscriber)
 
 7. **Call the Custom Service (To convert an RGB image into grayscale)**:<br/> 
-    In a new Terminal:
+    In a new Terminal (Remember to source the ROS2 Env):
     ```bash
     cd ros2_sinewave_ws 
+    call install\local_setup.bat
     ros2 service call /convert_image ros2_sinewave_interfaces/srv/ConvertImage "{image_path: 'C:/absolute/path/to/image.jpg'}"
     ```
     (The generated grayscale image is saved in the same folder as the original image)
+    
 8. **Run a Unit Test to Test the Service**:<br/> 
-    In a new Terminal:
+    In a new Terminal (Remember to source the ROS2 Env):
     ```bash
     cd ros2_sinewave_ws 
     pytest ros2_sinewave/test/test_service_callback.py
